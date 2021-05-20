@@ -17,7 +17,7 @@ class ItemWidget extends StatelessWidget {
         subtitle: Text(item.desc),
         trailing: Text(
           "£${item.price.toString()}",
-          textScaleFactor: 1.5,
+          textScaleFactor: 1.2,
           style: TextStyle(
             color: Colors.deepPurple,
             fontWeight: FontWeight.bold,
