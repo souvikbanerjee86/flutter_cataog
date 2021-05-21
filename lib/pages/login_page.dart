@@ -30,6 +30,7 @@ class _LoginPageState extends State<LoginPage> {
     return Material(
         color: Colors.white,
         child: SingleChildScrollView(
+          padding: EdgeInsets.only(top: 35.0),
           child: Form(
             key: _formKey,
             child: Column(

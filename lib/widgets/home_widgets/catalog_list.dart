@@ -67,7 +67,7 @@ class CatalogItem extends StatelessWidget {
                           MaterialStateProperty.all(MyTheme.darkBluishColor),
                     ),
                     onPressed: () {},
-                    child: "Buy".text.make(),
+                    child: "Add to cart".text.make(),
                   )
                 ],
               ).pOnly(right: 8.0)
@@ -75,6 +75,6 @@ class CatalogItem extends StatelessWidget {
           ),
         ),
       ],
-    )).color(Colors.white).rounded.square(150).make().py16();
+    )).color(Colors.white).rounded.square(150).make().py8();
   }
 }
