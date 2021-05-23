@@ -5,9 +5,9 @@ import 'package:flutter/foundation.dart';
 class CatalogModel {
   static List<Item> items;
 
-  static Item getItemById(int id) =>
+  Item getItemById(int id) =>
       items.firstWhere((element) => element.id == id, orElse: null);
-  static Item itemByPosition(int position) => items[position];
+   Item itemByPosition(int position) => items[position];
 }
 
 class Item {
