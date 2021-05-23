@@ -100,7 +100,6 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius:
                             BorderRadius.circular(changeButton ? 40 : 8),
                         child: InkWell(
-                          splashColor: Colors.red,
                           onTap: () => _onLogin(context),
                           child: AnimatedContainer(
                             duration: Duration(seconds: 1),
