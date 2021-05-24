@@ -4,7 +4,6 @@ import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../theme.dart';
 import 'add_to_cart.dart';
 import 'catalog_image.dart';
 
@@ -62,7 +61,7 @@ class CatalogItem extends StatelessWidget {
                 alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "£${catalog.price}".text.bold.lg.make(),
-                  AddToCart(catalog:catalog)
+                  AddToCart(catalog: catalog)
                 ],
               ).pOnly(right: 8.0)
             ],
