@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import '../theme.dart';
+import 'add_to_cart.dart';
 import 'catalog_image.dart';
 
 class CatalogList extends StatelessWidget {
@@ -60,15 +62,7 @@ class CatalogItem extends StatelessWidget {
                 alignment: MainAxisAlignment.spaceBetween,
                 children: [
                   "£${catalog.price}".text.bold.lg.make(),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all(StadiumBorder()),
-                      backgroundColor:
-                          MaterialStateProperty.all(context.theme.buttonColor),
-                    ),
-                    onPressed: () {},
-                    child: "Add to cart".text.make(),
-                  )
+                  AddToCart(catalog:catalog)
                 ],
               ).pOnly(right: 8.0)
             ],
