@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       routeInformationParser: VxInformationParser(),
       routerDelegate: VxNavigator(
         routes: {
+          MyRoutes.mainRoute: (_, __) => MaterialPage(child: LoginPage()),
           MyRoutes.loginRoute: (_, __) => MaterialPage(child: LoginPage()),
           MyRoutes.homeRoute: (_, __) => MaterialPage(child: HomePage()),
           MyRoutes.homeDetailsRoute: (uri, __) {
