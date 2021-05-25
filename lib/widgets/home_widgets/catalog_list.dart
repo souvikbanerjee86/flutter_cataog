@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/models/catalog.dart';
 import 'package:flutter_catalog/pages/home_detail_page.dart';
+import 'package:flutter_catalog/utils/routes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'add_to_cart.dart';
@@ -20,14 +21,19 @@ class CatalogList extends StatelessWidget {
               final catalog = CatalogModel.items[index];
               return InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => HomeDetailsPage(
-                        catalog: catalog,
-                      ),
-                    ),
+                  context.vxNav.push(
+                    Uri(
+                        path: MyRoutes.homeDetailsRoute,
+                        queryParameters: {"id": catalog.id.toString()}),
                   );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => HomeDetailsPage(
+                  //       catalog: catalog,
+                  //     ),
+                  //   ),
+                  // );
                 },
                 child: CatalogItem(catalog: catalog),
               );
@@ -39,14 +45,19 @@ class CatalogList extends StatelessWidget {
               final catalog = CatalogModel.items[index];
               return InkWell(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (BuildContext context) => HomeDetailsPage(
-                        catalog: catalog,
-                      ),
-                    ),
+                  context.vxNav.push(
+                    Uri(
+                        path: MyRoutes.homeDetailsRoute,
+                        queryParameters: {"id": catalog.id.toString()}),
                   );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (BuildContext context) => HomeDetailsPage(
+                  //       catalog: catalog,
+                  //     ),
+                  //   ),
+                  // );
                 },
                 child: CatalogItem(catalog: catalog),
               );
